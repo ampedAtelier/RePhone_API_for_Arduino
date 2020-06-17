@@ -3,15 +3,12 @@
 #include <stdio.h>
 
 
-void setup()
-{
+void setup() {
 	Serial.begin(115200);
 	Serial.print("Sensor Hub test.\r\n");
 
-	while(1)
-	{
-		if(LSensorHub.check_on_line())
-		{
+	while(1) {
+		if(LSensorHub.check_on_line()) {
 			Serial.print("Sensor Hub is on line.\r\n");
 			break;
 		}
@@ -20,8 +17,7 @@ void setup()
 	}
 }
 
-void loop()
-{
+void loop() {
 	long data1 = 0;
 	long data2 = 0;
 	long data3 = 0;
