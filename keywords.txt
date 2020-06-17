@@ -1,0 +1,9 @@
+# Arduino Syntax Coloring Map 
+
+LLedMatrixClass         KEYWORD1
+check_on_line           KEYWORD2
+disp_string             KEYWORD2
+disp_char               KEYWORD2
+set_disp_orientation    KEYWORD2
+disp_pic                KEYWORD2
+disp_data               KEYWORD2
