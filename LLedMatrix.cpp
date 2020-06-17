@@ -17,8 +17,7 @@
 #include "Wire.h"
 
 
-unsigned char LLedMatrixClass::check_on_line()
-{
+unsigned char LLedMatrixClass::check_on_line() {
 	unsigned char DataBuf[4] = {0};
 	unsigned char i = 0;
 	Wire.begin();
@@ -26,22 +25,17 @@ unsigned char LLedMatrixClass::check_on_line()
     Wire.write(0);
 	Wire.endTransmission();
 	Wire.requestFrom(LEDAddress, 4);
-	while(Wire.available())
-    {
+	while (Wire.available()) {
 		DataBuf[i++] = Wire.read();
     }
-	if(DataBuf[3] == LEDAddress)
-	{
+	if (DataBuf[3] == LEDAddress) {
 		return true;
-	}
-	else
-	{
+	} else {
 		return false;
 	}
 }
 
-void LLedMatrixClass::disp_string(const char uData[],unsigned char uDataLength,unsigned int uTime)
-{
+void LLedMatrixClass::disp_string(const char uData[],unsigned char uDataLength,unsigned int uTime) {
 	unsigned char buffer[20] = {0};
 	unsigned char i;
 	
@@ -58,8 +52,7 @@ void LLedMatrixClass::disp_string(const char uData[],unsigned char uDataLength,u
 	Wire.endTransmission();
 }
 
-void LLedMatrixClass::disp_char(const char uData,unsigned int uTime)
-{
+void LLedMatrixClass::disp_char(const char uData,unsigned int uTime) {
 	unsigned char buffer[4] = {0};
 	unsigned char  i;
 	
@@ -74,16 +67,14 @@ void LLedMatrixClass::disp_char(const char uData,unsigned int uTime)
 	Wire.endTransmission();
 }
 
-void LLedMatrixClass::set_disp_orientation(unsigned char orientation)
-{
+void LLedMatrixClass::set_disp_orientation(unsigned char orientation) {
 	Wire.begin();
 	Wire.beginTransmission(LEDAddress);
 	Wire.write(SET_DISP_ORIENTATION);
 	Wire.endTransmission();
 }
 
-void LLedMatrixClass::disp_pic(unsigned char uPicNum, unsigned int uTime)
-{
+void LLedMatrixClass::disp_pic(unsigned char uPicNum, unsigned int uTime) {
 	unsigned char buffer[4] = {0};
 	unsigned char  i;
 	
@@ -98,8 +89,7 @@ void LLedMatrixClass::disp_pic(unsigned char uPicNum, unsigned int uTime)
 	Wire.endTransmission();
 }
 
-void LLedMatrixClass::disp_data(unsigned char *uPicData, unsigned int uTime)
-{
+void LLedMatrixClass::disp_data(unsigned char *uPicData, unsigned int uTime) {
 	unsigned char buffer[8] = {0};
 	
 	buffer[0] = DISP_DATA;
