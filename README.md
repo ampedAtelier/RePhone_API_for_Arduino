@@ -11,4 +11,4 @@ Refer to the example sketches for use.
 * LWs2812.h - [Xadow Duino](https://wiki.seeedstudio.com/Xadow_Duino/)
 
 ## Xadow Duino
-The [Xadow Duino](https://wiki.seeedstudio.com/Xadow_Duino/), in addition to be a module, can be reprogramed easily using the [Arduino IDE](https://www.arduino.cc/en/Main/Software). While the Xadow Duino can control other modules power has to be supplied to the Xadow Connectors beakout pins in order to power the other modules.
+The [Xadow Duino](https://wiki.seeedstudio.com/Xadow_Duino/), in addition to be a module, can be reprogramed easily using the [Arduino IDE](https://www.arduino.cc/en/Main/Software). While the Xadow Duino can control other modules, power has to be supplied to the Xadow Connectors beakout pins in order to power the other modules.
