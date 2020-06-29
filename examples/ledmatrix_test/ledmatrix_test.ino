@@ -6,7 +6,7 @@ void setup() {
 	Serial.print("Led Matrix test.\r\n");
 	
 	while(1) {
-		if(LedMatrix.check_on_line()) {
+		if(LedMatrix.isAvailable()) {
 			Serial.print("Led Matrix is on line.\r\n");
 			break;
 		}
@@ -20,7 +20,7 @@ void loop() {
 
 	LedMatrix.disp_string("ABCD",4,200);
 	delay(4500);
-	LedMatrix.disp_char(' ',1);
+	LedMatrix.clearAll(1);
 	delay(1000);
 	LedMatrix.disp_char('X',1);
 	delay(1000);
@@ -35,7 +35,7 @@ void loop() {
 
 	LedMatrix.disp_pic(DIS_PIC_JOY_LVL0,2);
 	delay(1500);
-	LedMatrix.disp_pic(DIS_PIC_JOY_LVL1,2);
+	LedMatrix.disp_pic(DIS_PIC_JOY_LVL1,2); // heart
 	delay(1500);
 	LedMatrix.disp_pic(DIS_PIC_SAD_LVL0,2);
 	delay(1500);

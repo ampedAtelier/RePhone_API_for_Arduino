@@ -44,12 +44,23 @@
 class LLedMatrixClass
 {
 public:
+
+	/**
+	 *  \brief Turn all LEDs on.
+	 */
+	void displayAll(unsigned int uTime);
+
+	/**
+	 *  \brief Turn all LEDs off.
+	 */
+	void clearAll(unsigned int uTime);
+
 	/**
 	 *  \brief Get the status of the led matrix device.
 	 *
 	 *  \return Return TRUE or FALSE. TRUE is on line, FALSE is off line.
 	 */
-	unsigned char check_on_line();
+	unsigned char isAvailable();
 	
 	/**
 	 *  \brief Display the string.
@@ -70,7 +81,7 @@ public:
 	 *  
 	 *  \return Return Null.
 	 */
-	void disp_char(const char uData,unsigned int uTime);
+	void disp_char(const char uData, unsigned int uTime);
 	
 	/**
 	 *  \brief Set the orientation of display.

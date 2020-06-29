@@ -17,7 +17,15 @@
 #include "Wire.h"
 
 
-unsigned char LLedMatrixClass::check_on_line() {
+void LLedMatrixClass::displayAll(unsigned int uTime) {
+	disp_pic(DIS_PIC_ALL, uTime);
+}
+
+void LLedMatrixClass::clearAll(unsigned int uTime) {
+	disp_pic(DIS_PIN_NULL, uTime);
+}
+
+unsigned char LLedMatrixClass::isAvailable() {
 	unsigned char DataBuf[4] = {0};
 	unsigned char i = 0;
 	Wire.begin();
