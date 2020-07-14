@@ -1,6 +1,6 @@
 # RePhone API for Arduino
 The RePhone API for Arduino was created for SeeedStudio's [Rephone](https://wiki.seeedstudio.com/RePhone/) project.
-The API is a [Wire](https://www.arduino.cc/en/Reference/Wire) based protocol designed to be used by programable core modules such as Xadow GSM+BLE to programmatically control peripheral modules. The peripheral modules shipped preprogrammed to handle the protocol. Xadow modules are connected using  built-in 11 pin Xadow Connectors with flexible flat cables. Power to the modules is provided through the Xadow Connectors by a core module.
+The API is an I2C based protocol, using the Arduino [Wire](https://www.arduino.cc/en/Reference/Wire) library. It designed to be used by programable core modules such as Xadow GSM+BLE to programmatically control peripheral modules. The peripheral modules shipped preprogrammed to handle the protocol. Xadow modules are connected using  built-in 11 pin Xadow Connectors with flexible flat cables. Power to the modules is provided through the Xadow Connectors by a core module.
 
 ## Xadow RePhone Modules API
 Refer to the example sketches for use.
